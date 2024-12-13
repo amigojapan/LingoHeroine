@@ -1,0 +1,267 @@
+    Colors - Useful for describing things in multiple languages.
+        Examples: 赤 (Aka) - Red, 青 (Ao) - Blue, 緑 (Midori) - Green
+
+[
+    {"Japanese": "赤", "Romaji": "aka", "English": "Red", "Spanish": "Rojo"},
+    {"Japanese": "橙", "Romaji": "daidai", "English": "Orange", "Spanish": "Naranja"},
+    {"Japanese": "黄", "Romaji": "ki", "English": "Yellow", "Spanish": "Amarillo"},
+    {"Japanese": "緑", "Romaji": "midori", "English": "Green", "Spanish": "Verde"},
+    {"Japanese": "青", "Romaji": "ao", "English": "Blue", "Spanish": "Azul"},
+    {"Japanese": "藍", "Romaji": "ai", "English": "Indigo", "Spanish": "Índigo"},
+    {"Japanese": "紫", "Romaji": "murasaki", "English": "Purple", "Spanish": "Púrpura"},
+    {"Japanese": "桃色", "Romaji": "momoiro", "English": "Pink", "Spanish": "Rosa"},
+    {"Japanese": "茶色", "Romaji": "chairo", "English": "Brown", "Spanish": "Marrón"},
+    {"Japanese": "黒", "Romaji": "kuro", "English": "Black", "Spanish": "Negro"},
+    {"Japanese": "白", "Romaji": "shiro", "English": "White", "Spanish": "Blanco"},
+    {"Japanese": "灰色", "Romaji": "haiiro", "English": "Gray", "Spanish": "Gris"},
+    {"Japanese": "金色", "Romaji": "kin'iro", "English": "Gold", "Spanish": "Dorado"},
+    {"Japanese": "銀色", "Romaji": "gin'iro", "English": "Silver", "Spanish": "Plateado"},
+    {"Japanese": "水色", "Romaji": "mizuiro", "English": "Light Blue", "Spanish": "Azul Claro"},
+    {"Japanese": "緋色", "Romaji": "hiiro", "English": "Scarlet", "Spanish": "Escarlata"},
+    {"Japanese": "ベージュ", "Romaji": "beeju", "English": "Beige", "Spanish": "Beige"},
+    {"Japanese": "薄紫", "Romaji": "usumurasaki", "English": "Lavender", "Spanish": "Lavanda"},
+    {"Japanese": "山吹色", "Romaji": "yamabukiiro", "English": "Yellow Orange", "Spanish": "Naranja Amarillo"},
+    {"Japanese": "紺", "Romaji": "kon", "English": "Navy Blue", "Spanish": "Azul Marino"}
+]
+
+
+
+
+    Emotions - Helpful for expressing feelings.
+        Examples: 幸せ (Shiawase) - Happy, 悲しい (Kanashii) - Sad, 怒り (Ikari) - Anger
+[
+    {"Japanese": "幸せ", "Romaji": "shiawase", "English": "Happy", "Spanish": "Feliz"},
+    {"Japanese": "悲しい", "Romaji": "kanashii", "English": "Sad", "Spanish": "Triste"},
+    {"Japanese": "怒り", "Romaji": "ikari", "English": "Anger", "Spanish": "Enojo"},
+    {"Japanese": "驚き", "Romaji": "odoroki", "English": "Surprise", "Spanish": "Sorpresa"},
+    {"Japanese": "不安", "Romaji": "fuan", "English": "Anxiety", "Spanish": "Ansiedad"},
+    {"Japanese": "安心", "Romaji": "anshin", "English": "Relief", "Spanish": "Alivio"},
+    {"Japanese": "愛", "Romaji": "ai", "English": "Love", "Spanish": "Amor"},
+    {"Japanese": "憎しみ", "Romaji": "nikushimi", "English": "Hatred", "Spanish": "Odio"},
+    {"Japanese": "嫉妬", "Romaji": "shitto", "English": "Jealousy", "Spanish": "Celos"},
+    {"Japanese": "誇り", "Romaji": "hokori", "English": "Pride", "Spanish": "Orgullo"},
+    {"Japanese": "恥", "Romaji": "haji", "English": "Shame", "Spanish": "Vergüenza"},
+    {"Japanese": "恐怖", "Romaji": "kyoufu", "English": "Fear", "Spanish": "Miedo"},
+    {"Japanese": "希望", "Romaji": "kibou", "English": "Hope", "Spanish": "Esperanza"},
+    {"Japanese": "絶望", "Romaji": "zetsubou", "English": "Despair", "Spanish": "Desesperación"},
+    {"Japanese": "感謝", "Romaji": "kansha", "English": "Gratitude", "Spanish": "Gratitud"},
+    {"Japanese": "罪悪感", "Romaji": "zaiakukan", "English": "Guilt", "Spanish": "Culpa"},
+    {"Japanese": "後悔", "Romaji": "koukai", "English": "Regret", "Spanish": "Arrepentimiento"},
+    {"Japanese": "興奮", "Romaji": "koufun", "English": "Excitement", "Spanish": "Emoción"},
+    {"Japanese": "満足", "Romaji": "manzoku", "English": "Satisfaction", "Spanish": "Satisfacción"},
+    {"Japanese": "寂しい", "Romaji": "sabishii", "English": "Lonely", "Spanish": "Solo"}
+]
+
+
+    Weather - Ideal for discussing the environment.
+        Examples: 晴れ (Hare) - Sunny, 雨 (Ame) - Rain, 雪 (Yuki) - Snow
+
+[
+    {"Japanese": "晴れ", "Romaji": "hare", "English": "Sunny", "Spanish": "Soleado"},
+    {"Japanese": "曇り", "Romaji": "kumori", "English": "Cloudy", "Spanish": "Nublado"},
+    {"Japanese": "雨", "Romaji": "ame", "English": "Rain", "Spanish": "Lluvia"},
+    {"Japanese": "雪", "Romaji": "yuki", "English": "Snow", "Spanish": "Nieve"},
+    {"Japanese": "風", "Romaji": "kaze", "English": "Windy", "Spanish": "Ventoso"},
+    {"Japanese": "霧", "Romaji": "kiri", "English": "Fog", "Spanish": "Niebla"},
+    {"Japanese": "嵐", "Romaji": "arashi", "English": "Storm", "Spanish": "Tormenta"},
+    {"Japanese": "雷", "Romaji": "kaminari", "English": "Thunder", "Spanish": "Trueno"},
+    {"Japanese": "稲妻", "Romaji": "inazuma", "English": "Lightning", "Spanish": "Relámpago"},
+    {"Japanese": "台風", "Romaji": "taifuu", "English": "Typhoon", "Spanish": "Tifón"},
+    {"Japanese": "小雨", "Romaji": "kosame", "English": "Drizzle", "Spanish": "Llovizna"},
+    {"Japanese": "にわか雨", "Romaji": "niwaka ame", "English": "Shower", "Spanish": "Chubasco"},
+    {"Japanese": "暑い", "Romaji": "atsui", "English": "Hot", "Spanish": "Caluroso"},
+    {"Japanese": "寒い", "Romaji": "samui", "English": "Cold", "Spanish": "Frío"},
+    {"Japanese": "涼しい", "Romaji": "suzushii", "English": "Cool", "Spanish": "Fresco"},
+    {"Japanese": "霜", "Romaji": "shimo", "English": "Frost", "Spanish": "Escarcha"},
+    {"Japanese": "大雨", "Romaji": "ooame", "English": "Heavy Rain", "Spanish": "Lluvia Fuerte"},
+    {"Japanese": "快晴", "Romaji": "kaisei", "English": "Clear", "Spanish": "Despejado"},
+    {"Japanese": "猛暑", "Romaji": "mousho", "English": "Extreme Heat", "Spanish": "Calor Extremo"},
+    {"Japanese": "吹雪", "Romaji": "fubuki", "English": "Blizzard", "Spanish": "Ventisca"}
+]
+
+
+    Body Parts - Useful for health and medical contexts.
+        Examples: 頭 (Atama) - Head, 手 (Te) - Hand, 足 (Ashi) - Foot
+
+[
+    {"Japanese": "頭", "Romaji": "atama", "English": "Head", "Spanish": "Cabeza"},
+    {"Japanese": "目", "Romaji": "me", "English": "Eye", "Spanish": "Ojo"},
+    {"Japanese": "耳", "Romaji": "mimi", "English": "Ear", "Spanish": "Oreja"},
+    {"Japanese": "鼻", "Romaji": "hana", "English": "Nose", "Spanish": "Nariz"},
+    {"Japanese": "口", "Romaji": "kuchi", "English": "Mouth", "Spanish": "Boca"},
+    {"Japanese": "歯", "Romaji": "ha", "English": "Tooth", "Spanish": "Diente"},
+    {"Japanese": "髪", "Romaji": "kami", "English": "Hair", "Spanish": "Cabello"},
+    {"Japanese": "首", "Romaji": "kubi", "English": "Neck", "Spanish": "Cuello"},
+    {"Japanese": "肩", "Romaji": "kata", "English": "Shoulder", "Spanish": "Hombro"},
+    {"Japanese": "腕", "Romaji": "ude", "English": "Arm", "Spanish": "Brazo"},
+    {"Japanese": "肘", "Romaji": "hiji", "English": "Elbow", "Spanish": "Codo"},
+    {"Japanese": "手", "Romaji": "te", "English": "Hand", "Spanish": "Mano"},
+    {"Japanese": "指", "Romaji": "yubi", "English": "Finger", "Spanish": "Dedo"},
+    {"Japanese": "胸", "Romaji": "mune", "English": "Chest", "Spanish": "Pecho"},
+    {"Japanese": "背中", "Romaji": "senaka", "English": "Back", "Spanish": "Espalda"},
+    {"Japanese": "腹", "Romaji": "hara", "English": "Stomach", "Spanish": "Estómago"},
+    {"Japanese": "足", "Romaji": "ashi", "English": "Foot/Leg", "Spanish": "Pie/Pierna"},
+    {"Japanese": "膝", "Romaji": "hiza", "English": "Knee", "Spanish": "Rodilla"},
+    {"Japanese": "足首", "Romaji": "ashikubi", "English": "Ankle", "Spanish": "Tobillo"},
+    {"Japanese": "つま先", "Romaji": "tsumasaki", "English": "Toe", "Spanish": "Dedo del pie"}
+]
+
+
+    Fruits - Practical for food-related conversations.
+        Examples: みかん (Mikan) - Mandarin, 葡萄 (Budou) - Grape, 梨 (Nashi) - Pear
+
+[
+    {"Japanese": "りんご", "Romaji": "ringo", "English": "Apple", "Spanish": "Manzana"},
+    {"Japanese": "バナナ", "Romaji": "banana", "English": "Banana", "Spanish": "Plátano"},
+    {"Japanese": "オレンジ", "Romaji": "orenji", "English": "Orange", "Spanish": "Naranja"},
+    {"Japanese": "ぶどう", "Romaji": "budou", "English": "Grape", "Spanish": "Uva"},
+    {"Japanese": "桃", "Romaji": "momo", "English": "Peach", "Spanish": "Durazno"},
+    {"Japanese": "スイカ", "Romaji": "suika", "English": "Watermelon", "Spanish": "Sandía"},
+    {"Japanese": "メロン", "Romaji": "meron", "English": "Melon", "Spanish": "Melón"},
+    {"Japanese": "パイナップル", "Romaji": "painappuru", "English": "Pineapple", "Spanish": "Piña"},
+    {"Japanese": "いちご", "Romaji": "ichigo", "English": "Strawberry", "Spanish": "Fresa"},
+    {"Japanese": "さくらんぼ", "Romaji": "sakuranbo", "English": "Cherry", "Spanish": "Cereza"},
+    {"Japanese": "レモン", "Romaji": "remon", "English": "Lemon", "Spanish": "Limón"},
+    {"Japanese": "キウイ", "Romaji": "kiui", "English": "Kiwi", "Spanish": "Kiwi"},
+    {"Japanese": "マンゴー", "Romaji": "mangoo", "English": "Mango", "Spanish": "Mango"},
+    {"Japanese": "なし", "Romaji": "nashi", "English": "Pear", "Spanish": "Pera"},
+    {"Japanese": "柿", "Romaji": "kaki", "English": "Persimmon", "Spanish": "Caqui"},
+    {"Japanese": "ブルーベリー", "Romaji": "buruuberii", "English": "Blueberry", "Spanish": "Arándano"},
+    {"Japanese": "ライム", "Romaji": "raimu", "English": "Lime", "Spanish": "Lima"},
+    {"Japanese": "グレープフルーツ", "Romaji": "gureepufuruutsu", "English": "Grapefruit", "Spanish": "Pomelo"},
+    {"Japanese": "ココナッツ", "Romaji": "kokonattsu", "English": "Coconut", "Spanish": "Coco"},
+    {"Japanese": "ザクロ", "Romaji": "zakuro", "English": "Pomegranate", "Spanish": "Granada"}
+]
+
+
+    Furniture - Useful for household vocabulary.
+        Examples: いす (Isu) - Chair, 机 (Tsukue) - Desk, ベッド (Beddo) - Bed
+
+[
+    {"Japanese": "いす", "Romaji": "isu", "English": "Chair", "Spanish": "Silla"},
+    {"Japanese": "机", "Romaji": "tsukue", "English": "Desk", "Spanish": "Escritorio"},
+    {"Japanese": "ベッド", "Romaji": "beddo", "English": "Bed", "Spanish": "Cama"},
+    {"Japanese": "ソファ", "Romaji": "sofa", "English": "Sofa", "Spanish": "Sofá"},
+    {"Japanese": "テーブル", "Romaji": "teeburu", "English": "Table", "Spanish": "Mesa"},
+    {"Japanese": "棚", "Romaji": "tana", "English": "Shelf", "Spanish": "Estante"},
+    {"Japanese": "本棚", "Romaji": "hondana", "English": "Bookshelf", "Spanish": "Librero"},
+    {"Japanese": "クローゼット", "Romaji": "kuroozetto", "English": "Closet", "Spanish": "Armario"},
+    {"Japanese": "ドレッサー", "Romaji": "doressaa", "English": "Dresser", "Spanish": "Cómoda"},
+    {"Japanese": "鏡", "Romaji": "kagami", "English": "Mirror", "Spanish": "Espejo"},
+    {"Japanese": "ランプ", "Romaji": "ranpu", "English": "Lamp", "Spanish": "Lámpara"},
+    {"Japanese": "カーテン", "Romaji": "kaaten", "English": "Curtain", "Spanish": "Cortina"},
+    {"Japanese": "カーペット", "Romaji": "kaapetto", "English": "Carpet", "Spanish": "Alfombra"},
+    {"Japanese": "絨毯", "Romaji": "juutan", "English": "Rug", "Spanish": "Tapete"},
+    {"Japanese": "ナイトテーブル", "Romaji": "naito teeburu", "English": "Nightstand", "Spanish": "Mesa de noche"},
+    {"Japanese": "引き出し", "Romaji": "hikidashi", "English": "Drawer", "Spanish": "Cajón"},
+    {"Japanese": "テレビ台", "Romaji": "terebidai", "English": "TV Stand", "Spanish": "Mueble para TV"},
+    {"Japanese": "食器棚", "Romaji": "shokkidana", "English": "Cabinet", "Spanish": "Gabinete"},
+    {"Japanese": "オットマン", "Romaji": "ottoman", "English": "Ottoman", "Spanish": "Otoman"},
+    {"Japanese": "ベンチ", "Romaji": "benchi", "English": "Bench", "Spanish": "Banco"}
+]
+
+
+    Professions - Helpful for talking about occupations.
+        Examples: 医者 (Isha) - Doctor, 教師 (Kyoushi) - Teacher, エンジニア (Enjinia) - Engineer
+
+[
+    {"Japanese": "医者", "Romaji": "isha", "English": "Doctor", "Spanish": "Doctor"},
+    {"Japanese": "看護師", "Romaji": "kangoshi", "English": "Nurse", "Spanish": "Enfermero/a"},
+    {"Japanese": "教師", "Romaji": "kyoushi", "English": "Teacher", "Spanish": "Profesor/a"},
+    {"Japanese": "弁護士", "Romaji": "bengoshi", "English": "Lawyer", "Spanish": "Abogado/a"},
+    {"Japanese": "警察官", "Romaji": "keisatsukan", "English": "Police Officer", "Spanish": "Policía"},
+    {"Japanese": "消防士", "Romaji": "shouboushi", "English": "Firefighter", "Spanish": "Bombero/a"},
+    {"Japanese": "エンジニア", "Romaji": "enjinia", "English": "Engineer", "Spanish": "Ingeniero/a"},
+    {"Japanese": "建築家", "Romaji": "kenchikuka", "English": "Architect", "Spanish": "Arquitecto/a"},
+    {"Japanese": "会計士", "Romaji": "kaikeishi", "English": "Accountant", "Spanish": "Contador/a"},
+    {"Japanese": "プログラマー", "Romaji": "puroguramaa", "English": "Programmer", "Spanish": "Programador/a"},
+    {"Japanese": "科学者", "Romaji": "kagakusha", "English": "Scientist", "Spanish": "Científico/a"},
+    {"Japanese": "美容師", "Romaji": "biyoushi", "English": "Hairdresser", "Spanish": "Peluquero/a"},
+    {"Japanese": "俳優", "Romaji": "haiyuu", "English": "Actor", "Spanish": "Actor/Actriz"},
+    {"Japanese": "歌手", "Romaji": "kashu", "English": "Singer", "Spanish": "Cantante"},
+    {"Japanese": "農家", "Romaji": "nouka", "English": "Farmer", "Spanish": "Agricultor/a"},
+    {"Japanese": "運転手", "Romaji": "untenshu", "English": "Driver", "Spanish": "Conductor/a"},
+    {"Japanese": "作家", "Romaji": "sakka", "English": "Writer", "Spanish": "Escritor/a"},
+    {"Japanese": "翻訳者", "Romaji": "hon'yakusha", "English": "Translator", "Spanish": "Traductor/a"},
+    {"Japanese": "デザイナー", "Romaji": "dezainaa", "English": "Designer", "Spanish": "Diseñador/a"},
+    {"Japanese": "秘書", "Romaji": "hisho", "English": "Secretary", "Spanish": "Secretario/a"}
+]
+
+
+    Family Members - For talking about relationships.
+        Examples: 母 (Haha) - Mother, 父 (Chichi) - Father, 兄弟 (Kyoudai) - Sibling
+[
+    {"Japanese": "母", "Romaji": "haha", "English": "Mother", "Spanish": "Madre"},
+    {"Japanese": "父", "Romaji": "chichi", "English": "Father", "Spanish": "Padre"},
+    {"Japanese": "兄", "Romaji": "ani", "English": "Older Brother", "Spanish": "Hermano mayor"},
+    {"Japanese": "姉", "Romaji": "ane", "English": "Older Sister", "Spanish": "Hermana mayor"},
+    {"Japanese": "弟", "Romaji": "otouto", "English": "Younger Brother", "Spanish": "Hermano menor"},
+    {"Japanese": "妹", "Romaji": "imouto", "English": "Younger Sister", "Spanish": "Hermana menor"},
+    {"Japanese": "祖父", "Romaji": "sofu", "English": "Grandfather", "Spanish": "Abuelo"},
+    {"Japanese": "祖母", "Romaji": "sobo", "English": "Grandmother", "Spanish": "Abuela"},
+    {"Japanese": "息子", "Romaji": "musuko", "English": "Son", "Spanish": "Hijo"},
+    {"Japanese": "娘", "Romaji": "musume", "English": "Daughter", "Spanish": "Hija"},
+    {"Japanese": "夫", "Romaji": "otto", "English": "Husband", "Spanish": "Esposo"},
+    {"Japanese": "妻", "Romaji": "tsuma", "English": "Wife", "Spanish": "Esposa"},
+    {"Japanese": "おじ", "Romaji": "oji", "English": "Uncle", "Spanish": "Tío"},
+    {"Japanese": "おば", "Romaji": "oba", "English": "Aunt", "Spanish": "Tía"},
+    {"Japanese": "いとこ", "Romaji": "itoko", "English": "Cousin", "Spanish": "Primo/a"},
+    {"Japanese": "孫", "Romaji": "mago", "English": "Grandchild", "Spanish": "Nieto/a"},
+    {"Japanese": "甥", "Romaji": "oi", "English": "Nephew", "Spanish": "Sobrino"},
+    {"Japanese": "姪", "Romaji": "mei", "English": "Niece", "Spanish": "Sobrina"},
+    {"Japanese": "義理の兄", "Romaji": "giri no ani", "English": "Brother-in-law", "Spanish": "Cuñado"},
+    {"Japanese": "義理の姉", "Romaji": "giri no ane", "English": "Sister-in-law", "Spanish": "Cuñada"}
+]
+
+    School Subjects - Useful for students.
+        Examples: 数学 (Suugaku) - Math, 化学 (Kagaku) - Chemistry, 歴史 (Rekishi) - History
+[
+    {"Japanese": "数学", "Romaji": "suugaku", "English": "Mathematics", "Spanish": "Matemáticas"},
+    {"Japanese": "科学", "Romaji": "kagaku", "English": "Science", "Spanish": "Ciencias"},
+    {"Japanese": "物理", "Romaji": "butsuri", "English": "Physics", "Spanish": "Física"},
+    {"Japanese": "化学", "Romaji": "kagaku", "English": "Chemistry", "Spanish": "Química"},
+    {"Japanese": "生物学", "Romaji": "seibutsugaku", "English": "Biology", "Spanish": "Biología"},
+    {"Japanese": "地理", "Romaji": "chiri", "English": "Geography", "Spanish": "Geografía"},
+    {"Japanese": "歴史", "Romaji": "rekishi", "English": "History", "Spanish": "Historia"},
+    {"Japanese": "英語", "Romaji": "eigo", "English": "English", "Spanish": "Inglés"},
+    {"Japanese": "国語", "Romaji": "kokugo", "English": "Japanese Language", "Spanish": "Lengua Japonesa"},
+    {"Japanese": "スペイン語", "Romaji": "supeingo", "English": "Spanish", "Spanish": "Español"},
+    {"Japanese": "フランス語", "Romaji": "furansugo", "English": "French", "Spanish": "Francés"},
+    {"Japanese": "音楽", "Romaji": "ongaku", "English": "Music", "Spanish": "Música"},
+    {"Japanese": "美術", "Romaji": "bijutsu", "English": "Art", "Spanish": "Arte"},
+    {"Japanese": "体育", "Romaji": "taiiku", "English": "Physical Education", "Spanish": "Educación Física"},
+    {"Japanese": "情報", "Romaji": "jouhou", "English": "Information Technology", "Spanish": "Tecnología de la Información"},
+    {"Japanese": "経済学", "Romaji": "keizaigaku", "English": "Economics", "Spanish": "Economía"},
+    {"Japanese": "哲学", "Romaji": "tetsugaku", "English": "Philosophy", "Spanish": "Filosofía"},
+    {"Japanese": "心理学", "Romaji": "shinrigaku", "English": "Psychology", "Spanish": "Psicología"},
+    {"Japanese": "家庭科", "Romaji": "kateika", "English": "Home Economics", "Spanish": "Economía Doméstica"},
+    {"Japanese": "政治学", "Romaji": "seijigaku", "English": "Political Science", "Spanish": "Ciencias Políticas"}
+]
+
+
+    Countries and Languages - Expands on geography and linguistic terms.
+
+    Examples: フランス語 (Furansugo) - French language, 英語 (Eigo) - English, ドイツ (Doitsu) - Germany
+
+    [
+    {"Japanese": "英語", "Romaji": "eigo", "English": "English", "Spanish": "Inglés"},
+    {"Japanese": "スペイン語", "Romaji": "supeingo", "English": "Spanish", "Spanish": "Español"},
+    {"Japanese": "中国語", "Romaji": "chuugokugo", "English": "Chinese", "Spanish": "Chino"},
+    {"Japanese": "フランス語", "Romaji": "furansugo", "English": "French", "Spanish": "Francés"},
+    {"Japanese": "ドイツ語", "Romaji": "doitsugo", "English": "German", "Spanish": "Alemán"},
+    {"Japanese": "日本語", "Romaji": "nihongo", "English": "Japanese", "Spanish": "Japonés"},
+    {"Japanese": "韓国語", "Romaji": "kankokugo", "English": "Korean", "Spanish": "Coreano"},
+    {"Japanese": "ロシア語", "Romaji": "roshiago", "English": "Russian", "Spanish": "Ruso"},
+    {"Japanese": "アラビア語", "Romaji": "arabiago", "English": "Arabic", "Spanish": "Árabe"},
+    {"Japanese": "ポルトガル語", "Romaji": "porutogarugo", "English": "Portuguese", "Spanish": "Portugués"},
+    {"Japanese": "イタリア語", "Romaji": "itaria-go", "English": "Italian", "Spanish": "Italiano"},
+    {"Japanese": "ヒンディー語", "Romaji": "hindii-go", "English": "Hindi", "Spanish": "Hindi"},
+    {"Japanese": "ウルドゥー語", "Romaji": "uruduu-go", "English": "Urdu", "Spanish": "Urdu"},
+    {"Japanese": "ペルシア語", "Romaji": "perushiago", "English": "Persian", "Spanish": "Persa"},
+    {"Japanese": "トルコ語", "Romaji": "torukogo", "English": "Turkish", "Spanish": "Turco"},
+    {"Japanese": "オランダ語", "Romaji": "orandago", "English": "Dutch", "Spanish": "Holandés"},
+    {"Japanese": "ギリシャ語", "Romaji": "girishago", "English": "Greek", "Spanish": "Griego"},
+    {"Japanese": "タイ語", "Romaji": "taigo", "English": "Thai", "Spanish": "Tailandés"},
+    {"Japanese": "ヘブライ語", "Romaji": "heburai-go", "English": "Hebrew", "Spanish": "Hebreo"},
+    {"Japanese": "スウェーデン語", "Romaji": "suweeden-go", "English": "Swedish", "Spanish": "Sueco"}
+]
