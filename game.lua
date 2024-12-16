@@ -294,10 +294,15 @@ function handleTapEvent(event)
     end    
 end
 timeOut=nil
-if system.getInfo("environment") == "browser" then
+if system.getInfo("environment") == "browser"  then
 	timeOut=.3
 else
     timeOut=.03
+end
+local platform = system.getInfo("platform")
+if platform == "win32" or platform == "win64" then
+	print("rinning on windows")
+	timeOut=0.15000000000003
 end
 
 function functTapListener(event)
@@ -320,10 +325,7 @@ function functTapListener(event)
         -- reset global touch focus
         --display.getCurrentStage():setFocus( nil )
         --self.isFocus = nil
-        print("clock()-tapTimer:"..clock()-tapTimer)
-        if system.getInfo("environment") == "browser" then
-            physics.setScale( 32.5 )	
-        end
+        print("clock()-tapTimer:"..clock()-tapTimer.." timeOut:"..timeOut.." condition clock()-tapTimer <= timeOut")
         --if system.getInfo("platform") == "android"  then
         --    physics.setScale( 40 )	
         --end
