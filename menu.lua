@@ -79,7 +79,7 @@ function scene:show( event )
 		lblTitle:setFillColor( 0.82, 0.86, 1 )
 		
 		offsetY=offsetY+100
-		local lblTitle = display.newText( sceneGroup, "Player's languae", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+		local lblTitle = display.newText( sceneGroup, "Player's language", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 		lblTitle:setFillColor( 0.82, 0.86, 1 )
 
 		offsetY=offsetY+50
