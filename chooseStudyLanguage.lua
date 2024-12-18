@@ -19,6 +19,12 @@ function gotoStudyLanguageRomaji()
 	composer.gotoScene( "chooseGameMode" )
 end
 
+function gotoStudyLanguageRomajiInRomaji()
+	composer.setVariable( "language", "Romaji" )
+	composer.setVariable( "studyLanguage", "Romaji" )
+	composer.gotoScene( "chooseGameMode" )
+end
+
 function gotoMenu()
 	composer.gotoScene( "menu" )
 end
@@ -87,6 +93,12 @@ function scene:show( event )
 			btn2 = display.newText( sceneGroup, "Study Spanish", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 			btn2:setFillColor( 0.82, 0.86, 1 )				
 			btn2:addEventListener("tap", gotoStudyLanguageSpanish)
+
+			offsetY=offsetY+50
+			btn4 = display.newText( sceneGroup, "Study English", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn4:setFillColor( 0.82, 0.86, 1 )
+			btn4:addEventListener("tap", gotoStudyLanguageEnglish)
+
 		elseif language == "Japanese" then
 			btn1 = display.newText( sceneGroup, "英語を勉強する", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 			btn1:setFillColor( 0.82, 0.86, 1 )
@@ -96,6 +108,36 @@ function scene:show( event )
 			btn2 = display.newText( sceneGroup, "スペイン語を勉強する", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 			btn2:setFillColor( 0.82, 0.86, 1 )				
 			btn2:addEventListener("tap", gotoStudyLanguageSpanish)
+
+			offsetY=offsetY+50
+			btn4 = display.newText( sceneGroup, "日本語を漢字で勉強する", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn4:setFillColor( 0.82, 0.86, 1 )
+			btn4:addEventListener("tap", gotoStudyLanguageJapanese)
+
+			offsetY=offsetY+50
+			btn3 = display.newText( sceneGroup, "Nigongo wo romaji de benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn3:setFillColor( 0.82, 0.86, 1 )				
+			btn3:addEventListener("tap", gotoStudyLanguageRomajiInRomaji)
+		elseif language == "Romaji" then
+			btn1 = display.newText( sceneGroup, "eigo wo benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn1:setFillColor( 0.82, 0.86, 1 )
+			btn1:addEventListener("tap", gotoStudyLanguageEnglish)
+			
+			offsetY=offsetY+50
+			btn2 = display.newText( sceneGroup, "supeingo wo benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn2:setFillColor( 0.82, 0.86, 1 )				
+			btn2:addEventListener("tap", gotoStudyLanguageSpanish)
+
+			offsetY=offsetY+50
+			btn4 = display.newText( sceneGroup, "nihongo wo kanji de benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn4:setFillColor( 0.82, 0.86, 1 )
+			btn4:addEventListener("tap", gotoStudyLanguageJapanese)
+
+			offsetY=offsetY+50
+			btn3 = display.newText( sceneGroup, "Nigongo wo romaji de benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn3:setFillColor( 0.82, 0.86, 1 )				
+			btn3:addEventListener("tap", gotoStudyLanguageRomajiInRomaji)
+
 		elseif language == "Spanish" then
 			btn1 = display.newText( sceneGroup, "Estudiar Japones", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 			btn1:setFillColor( 0.82, 0.86, 1 )
@@ -110,6 +152,12 @@ function scene:show( event )
 			btn2 = display.newText( sceneGroup, "Estudiar Ingles", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 			btn2:setFillColor( 0.82, 0.86, 1 )				
 			btn2:addEventListener("tap", gotoStudyLanguageEnglish)
+
+			offsetY=offsetY+50
+			btn4 = display.newText( sceneGroup, "Esrudiar Español", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn4:setFillColor( 0.82, 0.86, 1 )				
+			btn4:addEventListener("tap", gotoStudyLanguageSpanish)
+
 		end
 
 		local btnBack = display.newText( sceneGroup, "<<", 200, 20, "fonts/ume-tgc5.ttf", 44 )

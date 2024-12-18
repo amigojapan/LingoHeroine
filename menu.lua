@@ -20,6 +20,12 @@ function sendToDIfferentTrialStates()
 		composer.gotoScene( "trialPeriodStart" )
 	end
 end
+
+function gotoStudyLanguageRomajiInRomaji()
+	composer.setVariable( "language", "Romaji" )
+	sendToDIfferentTrialStates()
+end
+
 local function gotoGameEnglish()
 	composer.setVariable( "language", "English" )
 	sendToDIfferentTrialStates()
@@ -106,7 +112,14 @@ function scene:show( event )
 		local startButtonJapanese = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
 		startButtonJapanese:setFillColor( 0.82, 0.86, 1 )
 		startButtonJapanese:addEventListener( "tap", gotoGameJapanese )
-	
+
+		offsetY=offsetY+55
+		translate=i18n_setlang("Romaji")
+		local startButtonRomaji = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
+		startButtonRomaji:setFillColor( 0.82, 0.86, 1 )
+		startButtonRomaji:addEventListener( "tap", gotoStudyLanguageRomajiInRomaji )
+		
+
 		offsetY=offsetY+55
 		translate=i18n_setlang("Spanish")
 		local startButtonSpanish = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
