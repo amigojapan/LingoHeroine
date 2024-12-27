@@ -19,6 +19,13 @@ lifeW=gridSize*3
 lifeH=gridSize/2
 fireRatTimer=nil
 slots = {}
+speed = composer.getVariable( "speed" )
+if speed=="1" then
+	speed=1
+else
+	speed=2
+end
+
 for i = 2, 14 do
     slots[i] = {}
 
@@ -163,7 +170,7 @@ function gameOver()
 		tomFacingDownCollapsedImg.isVisible=true
 	end
 	clearAllWitchSprites()
-	restartGameTimer = timer.performWithDelay( 3000, restartGame, 0 )
+	restartGameTimer = timer.performWithDelay( 3000*speed, restartGame, 0 )
 	if fireRatTimer then
 		timer.cancel(fireRatTimer)--(not fixed)trying to stop the monsters from flipping twice after second round
 	end
@@ -843,7 +850,7 @@ function myLeftTouchListener( event )
 		end
 		moveTomLeft()
 		currentButton=myLeftButton
-		fireTimerController = timer.performWithDelay( timeForMoveInMilliseconds+100, moveTomLeft, 0 )
+		fireTimerController = timer.performWithDelay( (timeForMoveInMilliseconds+100)*speed, moveTomLeft, 0 )
         print( "object touched = " .. tostring(event.target) )  -- "event.target" is the touched object
 	elseif ( event.phase == "moved" ) then
 		if isWithinBounds(myLeftButton, event) == false then
@@ -877,7 +884,7 @@ function myRightTouchListener( event )
 		end
 		moveTomRight()
 		currentButton=myRightButton
-		fireTimerController = timer.performWithDelay( timeForMoveInMilliseconds+100, moveTomRight, 0 )
+		fireTimerController = timer.performWithDelay( (timeForMoveInMilliseconds+100)*speed, moveTomRight, 0 )
         print( "object touched = " .. tostring(event.target) )  -- "event.target" is the touched object
 	elseif ( event.phase == "moved" ) then
 		if isWithinBounds(myLeftButton, event) == false then
@@ -907,7 +914,7 @@ local function myUpTouchListener( event )
 		end
 		moveTomUp()
 		currentButton=myUpButton
-		fireTimerController = timer.performWithDelay( timeForMoveInMilliseconds+100, moveTomUp, 0 )
+		fireTimerController = timer.performWithDelay( (timeForMoveInMilliseconds+100)*speed, moveTomUp, 0 )
         print( "object touched = " .. tostring(event.target) )  -- "event.target" is the touched object
 	elseif ( event.phase == "moved" ) then
 		if isWithinBounds(myUpButton, event) == false then
@@ -937,7 +944,7 @@ local function myDownTouchListener( event )
 		end
 		moveTomDown()
 		currentButton=myDownButton
-		fireTimerController = timer.performWithDelay( timeForMoveInMilliseconds+100, moveTomDown, 0 )
+		fireTimerController = timer.performWithDelay( (timeForMoveInMilliseconds+100)*speed, moveTomDown, 0 )
         print( "object touched = " .. tostring(event.target) )  -- "event.target" is the touched object
 	elseif ( event.phase == "moved" ) then
 		if isWithinBounds(myDownButton, event) == false then
@@ -967,7 +974,7 @@ local function myFireTouchListener( event )
 		end
 		fireball()
 		currentButton=myFireButton
-		fireTimerMagic = timer.performWithDelay( timeForMoveInMilliseconds+100, fireball, 0 )
+		fireTimerMagic = timer.performWithDelay( (timeForMoveInMilliseconds+100)*speed, fireball, 0 )
         print( "object touched = " .. tostring(event.target) )  -- "event.target" is the touched object
 	elseif ( event.phase == "moved" ) then
 		if isWithinBounds(myFireButton, event) == false then
@@ -1015,7 +1022,7 @@ function gameloop()
 	end
 end
 
-fireRatTimer = timer.performWithDelay( timeForMoveInMilliseconds+100, gameloop, 0 )
+fireRatTimer = timer.performWithDelay( (timeForMoveInMilliseconds+100)*speed, gameloop, 0 )
 
 
 function detectCollision(x1, y1, width1, height1, x2, y2, width2, height2) 

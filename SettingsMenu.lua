@@ -1,5 +1,5 @@
 require("i18n_dict")
-require("trial")
+--require("trial")
 local composer = require( "composer" )
 
 local scene = composer.newScene()
@@ -8,51 +8,33 @@ local scene = composer.newScene()
 -- Code outside of the scene event functions below will only be executed ONCE unless
 -- the scene is removed entirely (not recycled) via "composer.removeScene()"
 -- -----------------------------------------------------------------------------------
-
+kanzenban=true
 print( "ORIENTATION: "..system.orientation )
 function sendToDIfferentTrialStates()
+	if kanzenban then
+		composer.gotoScene( "difficulty" )
+	end
 	local trialState=trialAlgorythm()
 	if trialState == "Free version" or trialState == "Trial period valid" then
-		composer.gotoScene( "chooseStudyLanguage" )
+		composer.gotoScene( "difficulty" )
 	elseif trialState == "Trial period over" then
 		composer.gotoScene( "trialPeriodOver" )
 	elseif trialState == "Trial period start" then
 		composer.gotoScene( "trialPeriodStart" )
 	end
 end
-
-local function gotoSettingsMenu()
-	composer.gotoScene( "SettingsMenu" )
+local function backToMainMenu()
+	composer.gotoScene( "menu" )
 end
 
-local function setDefaultSpeed()
-	speed = composer.getVariable( "speed" )
-	if not speed then
-		speed="1"
-	end
-	print("speed:"..speed)
-	composer.setVariable( "speed", speed )
+local function setHalfSpeed()
+	composer.setVariable( "speed", "2" )
+	composer.gotoScene( "menu" )
 end
 
-
-function gotoStudyLanguageRomajiInRomaji()
-	composer.setVariable( "language", "Romaji" )
-	sendToDIfferentTrialStates()
-end
-
-local function gotoGameEnglish()
-	composer.setVariable( "language", "English" )
-	sendToDIfferentTrialStates()
-end
-
-local function gotoGameJapanese()
-	composer.setVariable( "language", "Japanese" )
-	sendToDIfferentTrialStates()
-end
-
-local function gotoGameSpanish()
-	composer.setVariable( "language", "Spanish" )
-	sendToDIfferentTrialStates()
+local function setFullSpeed()
+	composer.setVariable( "speed", "1" )
+	composer.gotoScene( "menu" )
 end
 
 local function gotoHighScores()
@@ -93,63 +75,38 @@ function scene:show( event )
 		ordersRectangle.strokeWidth = 5
 		ordersRectangle:setFillColor( 0, 0 , 0, 0.5 )
 		ordersRectangle:setStrokeColor( 1, 0, 0 )
-		
-		offsetY=50
-		local lblTitle = display.newText( sceneGroup, "Lingo Heroine", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 50 )
-		lblTitle:setFillColor( 0.82, 0.86, 1 )
-		
-		offsetY=offsetY+100
-		local lblTitle = display.newText( sceneGroup, "Player's language", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+
+		offsetY=150	
+		local lblTitle = display.newText( sceneGroup, "Settings", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 75 )
 		lblTitle:setFillColor( 0.82, 0.86, 1 )
 
-		offsetY=offsetY+50
-		local lblTitle = display.newText( sceneGroup, "プレイヤー言語", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+		offsetY=offsetY+75
+		local lblTitle = display.newText( sceneGroup, "設定", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 75 )
 		lblTitle:setFillColor( 0.82, 0.86, 1 )
 
-		offsetY=offsetY+50
-		local lblTitle = display.newText( sceneGroup, "Idioma del Jugador", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+		offsetY=offsetY+75
+		local lblTitle = display.newText( sceneGroup, "Configuracion", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 75 )
 		lblTitle:setFillColor( 0.82, 0.86, 1 )
-
 		--local title = display.newImageRect( sceneGroup, "img/tom burger 3 title.png", 676, 97 )
 		--title.x = display.contentCenterX
 		--title.y = 200
 	
 	
-		offsetY=450
-		translate=i18n_setlang("English")
-		local startButtonEnglish = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
+		offsetY=500
+		local startButtonEnglish = display.newText( sceneGroup, "Fast、早い, Rapido", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
 		startButtonEnglish:setFillColor( 0.82, 0.86, 1 )
-		startButtonEnglish:addEventListener( "tap", gotoGameEnglish )
+		startButtonEnglish:addEventListener( "tap", setFullSpeed )
 	
 		offsetY=offsetY+55
 		translate=i18n_setlang("Japanese")
-		local startButtonJapanese = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
+		local startButtonJapanese = display.newText( sceneGroup, "Slow、遅い, Despacio", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
 		startButtonJapanese:setFillColor( 0.82, 0.86, 1 )
-		startButtonJapanese:addEventListener( "tap", gotoGameJapanese )
-
-		offsetY=offsetY+55
-		translate=i18n_setlang("Romaji")
-		local startButtonRomaji = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
-		startButtonRomaji:setFillColor( 0.82, 0.86, 1 )
-		startButtonRomaji:addEventListener( "tap", gotoStudyLanguageRomajiInRomaji )
-		
-
-		offsetY=offsetY+55
-		translate=i18n_setlang("Spanish")
-		local startButtonSpanish = display.newText( sceneGroup, translate["Language"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
-		startButtonSpanish:setFillColor( 0.82, 0.86, 1 )
-		startButtonSpanish:addEventListener( "tap", gotoGameSpanish )
-
-		offsetY=offsetY+55
-		local startButtonSpanish = display.newText( sceneGroup, "Settings, 設定, Opciones", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 44 )
-		startButtonSpanish:setFillColor( 0.82, 0.86, 1 )
-		startButtonSpanish:addEventListener( "tap", gotoSettingsMenu )
-
+		startButtonJapanese:addEventListener( "tap", setHalfSpeed )
 	
-		local highScoresButton = display.newText( sceneGroup, "Scores,スコアー、Puntuaje", display.contentCenterX, 720, "fonts/ume-tgc5.ttf", 44 )
+		local highScoresButton = display.newText( sceneGroup, "<<", 300, 50, "fonts/ume-tgc5.ttf", 44 )
 		highScoresButton:setFillColor( 0.75, 0.78, 1 )
 	
-		highScoresButton:addEventListener( "tap", gotoHighScores )
+		highScoresButton:addEventListener( "tap", backToMainMenu )
 	
 	end
 end

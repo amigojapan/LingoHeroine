@@ -10,6 +10,13 @@ local scene = composer.newScene()
 -- -----------------------------------------------------------------------------------
 timerEverySecond=nil
 studyLanguage=nil
+speed = composer.getVariable( "speed" )
+if speed=="1" then
+	speed=1
+else
+	speed=2
+end
+
 function playWord(language,word)
     local recordedSound = audio.loadStream("flat/"..language.."/"..word..".mp3", system.ResourceDirectory)
     if recordedSound then
@@ -394,7 +401,7 @@ if studyMode == false then
     timeRemaining=40
     lblTimeRemaining = display.newText("Time remaining:"..timeRemaining.."", 500, 20, "fonts/ume-tgc5.ttf", 40 )
     lblTimeRemaining:setFillColor( 0, 1, 0 )
-    timerEverySecond=timer.performWithDelay( 1000, everySecondTimer, 0 )
+    timerEverySecond=timer.performWithDelay( 1000*speed, everySecondTimer, 0 )
 end
 
 background = display.newGroup()
