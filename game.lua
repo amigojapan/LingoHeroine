@@ -11,10 +11,10 @@ local scene = composer.newScene()
 timerEverySecond=nil
 studyLanguage=nil
 speed = composer.getVariable( "speed" )
-if speed=="1" then
-	speed=1
-else
+if speed=="2" then
 	speed=2
+else
+	speed=1
 end
 
 function playWord(language,word)

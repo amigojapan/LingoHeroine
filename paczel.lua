@@ -20,10 +20,10 @@ lifeH=gridSize/2
 fireRatTimer=nil
 slots = {}
 speed = composer.getVariable( "speed" )
-if speed=="1" then
-	speed=1
-else
+if speed=="2" then
 	speed=2
+else
+	speed=1
 end
 
 for i = 2, 14 do
@@ -1115,5 +1115,8 @@ return scene
 
 --(fixed)fix that the life only goes down when the player is moving, I think i need to detect the collision when the monster is moving
 --(done)add quit(what happens when quit? go to menu? go to categories?(decided on go back to menu)) and pause buttons.
---add how many words you got out of 8 in the good job screen
+--(done)add how many words you got out of 8 in the good job screen
 --(fixed)fix the problem with the monsters turning after plaing more than one turn(probably just need to clear timers(it was the timer))
+--(dont remember what I did, but ti seems to be fixed in the newest version)BUG:close proximity attack is not working
+--(fixed)words are nto capilatized correctly in i18n dictionary in english for category names, or maybe it is in the json file
+--(fixed)bug, it is defaulting to slow speed when no option is selected on android...

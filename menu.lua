@@ -146,7 +146,7 @@ function scene:show( event )
 		startButtonSpanish:addEventListener( "tap", gotoSettingsMenu )
 
 	
-		local highScoresButton = display.newText( sceneGroup, "Scores,スコアー、Puntuaje", display.contentCenterX, 720, "fonts/ume-tgc5.ttf", 44 )
+		local highScoresButton = display.newText( sceneGroup, "Scores,スコア、Puntuaje", display.contentCenterX, 720, "fonts/ume-tgc5.ttf", 44 )
 		highScoresButton:setFillColor( 0.75, 0.78, 1 )
 	
 		highScoresButton:addEventListener( "tap", gotoHighScores )
