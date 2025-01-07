@@ -1120,3 +1120,4 @@ return scene
 --(dont remember what I did, but ti seems to be fixed in the newest version)BUG:close proximity attack is not working
 --(fixed)words are nto capilatized correctly in i18n dictionary in english for category names, or maybe it is in the json file
 --(fixed)bug, it is defaulting to slow speed when no option is selected on android...
+--** reminder, modify the explanation screen for when the person does quiz mode

@@ -24,10 +24,26 @@ local function gotoStudy(event)
 	composer.gotoScene( "chooseCategories" )
 end
 
+local function gotoQuiz(event)
+	composer.setVariable( "gameMode", "Quiz" )
+	composer.gotoScene( "chooseCategories" )
+end
+
 local function gotoDictionary(event)
 	composer.setVariable( "gameMode", "Dictionary" )
 	composer.gotoScene( "chooseCategories" )
 end
+
+
+local function gotoPaczel(event)
+	composer.setVariable( "gameMode", "Paczel" )
+	gameMode = composer.getVariable( "gameMode" )
+	print("gameMode:"..gameMode)
+	composer.setVariable("numberOfPowerUps",5)
+	composer.setVariable("numberOfMonsters",5)
+	composer.gotoScene( "paczel" )
+end
+
 
 local function getCategoryNames(parsedData)
     local categoryNames = {}
@@ -84,10 +100,14 @@ function scene:show( event )
 		
 
 		offsetY=offsetY+100
-		-- Path for the file to read
 		local btnPlay = display.newText( sceneGroup, translate["Play"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 		btnPlay:setFillColor( 0.82, 0.86, 1 )
 		btnPlay:addEventListener( "tap", gotoPlay )
+
+		offsetY=offsetY+50
+		local btnQuiz = display.newText( sceneGroup, translate["Quiz"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+		btnQuiz:setFillColor( 0.82, 0.86, 1 )
+		btnQuiz:addEventListener( "tap", gotoQuiz )
 
 		offsetY=offsetY+50
 		local btnStudy = display.newText( sceneGroup, translate["Study"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
@@ -98,6 +118,12 @@ function scene:show( event )
 		local btnStudy = display.newText( sceneGroup, translate["Dictionary"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 		btnStudy:setFillColor( 0.82, 0.86, 1 )
 		btnStudy:addEventListener( "tap", gotoDictionary )
+
+		offsetY=offsetY+50
+		local btnPaczel = display.newText( sceneGroup, translate["Paczel"], display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+		btnPaczel:setFillColor( 0.82, 0.86, 1 )
+		btnPaczel:addEventListener( "tap", gotoPaczel )
+
 
 		local btnBack = display.newText( sceneGroup, "<<", 200, 20, "fonts/ume-tgc5.ttf", 44 )
 		btnBack:setFillColor( 0.75, 0.78, 1 )

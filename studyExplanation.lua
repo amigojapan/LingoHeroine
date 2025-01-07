@@ -1,6 +1,5 @@
 require("i18n_dict")
 local composer = require( "composer" )
---require("writeScores")
 
 local scene = composer.newScene()
 
@@ -9,18 +8,17 @@ local scene = composer.newScene()
 -- the scene is removed entirely (not recycled) via "composer.removeScene()"
 -- -----------------------------------------------------------------------------------
 
+
 print( "ORIENTATION: "..system.orientation )
 
-local function gotoPerfectScoreScreen()
-	gameMode = composer.getVariable( "gameMode" )
-	print("gameMode:"..gameMode)
-	if gameMode=="Paczel" then
-		composer.gotoScene( "chooseGameMode" )
-	else
-		composer.gotoScene( "chooseCategories" )
-	end
+local function gotoChooseCategories()
+	composer.gotoScene( "chooseCategories" )
 end
 
+
+local function gotoGame()
+	composer.gotoScene( "game" )
+end
 -- -----------------------------------------------------------------------------------
 -- Scene event functions
 -- -----------------------------------------------------------------------------------
@@ -30,7 +28,6 @@ function scene:create( event )
 
 	local sceneGroup = self.view
 	-- Code here runs when the scene is first created but has not yet appeared on screen
-
 	local background = display.newImageRect( sceneGroup, "backgrounds/background.png", 1400,800 )
 	background.x = display.contentCenterX
 	background.y = display.contentCenterY
@@ -38,18 +35,30 @@ function scene:create( event )
 	ordersRectangle.strokeWidth = 5
 	ordersRectangle:setFillColor( 0, 0 , 0, 0.5 )
 	ordersRectangle:setStrokeColor( 1, 0, 0 )
-	story = display.newImageRect( sceneGroup, "backgrounds/StageClear.png", 1000,800 )
+	language=composer.getVariable( "language" )
+	if language=="English" then
+		story = display.newImageRect( sceneGroup, "backgrounds/studyExplanationEnglish.png", 1000,800 )
+	elseif language=="Japanese" then
+		story = display.newImageRect( sceneGroup, "backgrounds/studyExplanationJapanese.png", 1000,800 )
+	elseif language=="Spanish" then
+		story = display.newImageRect( sceneGroup, "backgrounds/studyExplanationSpanish.png", 1000,800 )
+	elseif language=="Romaji" then
+		story = display.newImageRect( sceneGroup, "backgrounds/studyExplanationRomaji.png", 1000,800 )
+	end
 	story.x = display.contentCenterX
 	story.y = display.contentCenterY
 
-	--local lblTitle = display.newText( sceneGroup, "Story", display.contentCenterX, 50, "fonts/ume-tgc5.ttf", 75 )
-	--lblTitle:setFillColor( 0.82, 0.86, 1 )
-	local totalPointsFinal = composer.getVariable( "totalPointsFinal" )
-	--writeScore("\n"..tostring(totalPointsFinal), difficulty)
-	local highScoresButton = display.newText( sceneGroup, "OK", display.contentCenterX, 720, "fonts/ume-tgc5.ttf", 44 )
-	highScoresButton:setFillColor( 0.75, 0.78, 1 )
+	local lblTitle = display.newText( sceneGroup, "Info.説明", display.contentCenterX, 50, "fonts/ume-tgc5.ttf", 75 )
+	lblTitle:setFillColor( 0.82, 0.86, 1 )
 
-	highScoresButton:addEventListener( "tap", gotoPerfectScoreScreen )
+	local highScoresButton = display.newText( sceneGroup, "Start!", display.contentCenterX, 720, "fonts/ume-tgc5.ttf", 44 )
+	highScoresButton:setFillColor( 0.75, 0.78, 1 )
+	highScoresButton:addEventListener( "tap", gotoGame )
+
+	local playButton = display.newText( sceneGroup, "<<", 300, 50, "fonts/ume-tgc5.ttf", 44 )
+	playButton:setFillColor( 0.82, 0.86, 1 )
+	playButton:addEventListener( "tap", gotoChooseCategories )
+
 end
 
 

@@ -12,10 +12,13 @@ local scene = composer.newScene()
 -- -----------------------------------------------------------------------------------
 local function gotoCategory(event)
 	composer.setVariable( "category", event.target.value )
+	print("gameMode:"..composer.getVariable("gameMode"))
 	if composer.getVariable("gameMode")  == "Dictionary" then
 		composer.gotoScene( "Dictionary" )	
-	else
+	elseif composer.getVariable("gameMode")  == "Quiz" or composer.getVariable("gameMode")  == "Study" then
 		composer.gotoScene( "quizExplanation" )
+	elseif composer.getVariable("gameMode")  == "Play" then
+		composer.gotoScene( "studyExplanation" )
 	end
 end
 

@@ -385,16 +385,33 @@ function everySecondTimer()
             end            
             if wrongAnswers > 0  then
                 hideEverything()
-                composer.gotoScene( "paczelExplanation" )
+                if quizMode then
+                    composer.setVariable( "wordsRight", pointCount )
+                    if pointCount>0 then
+                        composer.gotoScene( "goodJob" )
+                    else
+                        composer.gotoScene( "tryAgain" )
+                    end
+                else
+                    composer.gotoScene( "paczelExplanation" )
+                end
             end
         end
     end
 end
 gameMode=composer.getVariable( "gameMode" )
 if gameMode== "Study" then
+    print("Study Mode")
     studyMode=true
-else
-    studyMode=false    
+    quizMode=false
+elseif gameMode== "Play" then
+    print("Play Mode")
+    studyMode=false
+    quizMode=false
+elseif gameMode== "Quiz" then
+    print("Quiz Mode")
+    studyMode=false
+    quizMode=true
 end
 
 if studyMode == false then
@@ -415,7 +432,9 @@ function hideEverything()
         lblTimeRemaining.isVisible=false 
     end
     for key, icon in ipairs(iconsTable) do
-        icon:removeSelf()    
+        if icon.removeSelf then
+            icon:removeSelf()
+        end    
     end
 end
 if not file then
