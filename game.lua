@@ -385,7 +385,7 @@ function everySecondTimer()
             end            
             if wrongAnswers > 0  then
                 hideEverything()
-                composer.gotoScene( "paczel" )
+                composer.gotoScene( "paczelExplanation" )
             end
         end
     end
@@ -566,3 +566,5 @@ return scene
 --(I think I fixed it, but I have not tested it on all platforms yet(cause I am at work))time for touch seems to be <00.3 in simulator and 0.03 in browser
 --  the web time does not work for android, will try the simulator time 
 -- stars and mosters appear after the end of goof job,need to clear them
+--make the quiz only version of the game
+--  make the play paczel only part of the game

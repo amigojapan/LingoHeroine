@@ -15,7 +15,7 @@ local function gotoCategory(event)
 	if composer.getVariable("gameMode")  == "Dictionary" then
 		composer.gotoScene( "Dictionary" )	
 	else
-		composer.gotoScene( "game" )
+		composer.gotoScene( "quizExplanation" )
 	end
 end
 
