@@ -1,0 +1,297 @@
+I have a question, I have this game I am almost finihsed making, 
+but I am running into what I think is a problem with composer.
+try playing my game in https://amjp.psy-k.org/tom-burger/Play-Tom-Burger-HTML5.html
+you will find you can finish the level twice, but the thind time you finish the level
+and click on start on dailyScoresScreen.lua it will crash with error indicaring that in
+line 299 of game.lua that sceneGroup is nil. since it works twice I dont get why it wont
+work a third or more times.
+
+ (you can clear a level just by avoiding hte mouse and the poop if you wnat,
+I have made the time go by quickly, so what woudl notmally take 8 minutes just takes a short time)
+
+this is my github https://github.com/amigojapan/TomBurger3Solar2d 
+
+I think the problem is either is dailyScoresScreen.lua or in game.lua.
+
+all help appreciated!, 
+
+    amigojapan
+
+
+Tom is a normal guy,
+he studies engineering, 
+to be able to pay for his
+studies he works in the
+kitchen of a burger restaurant. 
+
+With the help of this app Tom
+knows what he has to do to
+make his job go well... 
+follow the instructions. 
+
+Press the ? in the game
+to see the instructions
+
+トムはITを勉強している男の子です。
+学費を稼ぐために、
+ハンバーガー屋さんのキッチンで
+働いています。
+
+このアプリをプレイしてトムと
+一緒に仕事を覚えましょう。
+
+操作方法はマニュアルに従ってください。
+ゲーム内で「?」を押すと、
+マニュアルが表示されます。
+
+Tom es un chico normal, 
+estudia ingenieria y para
+poder pagarse los estudios
+trabaja en la cocina de una
+hamburgueseria.
+
+Con ayuda de esta aplicacion
+Tom sabe que tiene que hacer
+para que vaya bien su trabajo...
+
+sigue las instrucciones.
+preciona la ? en el juego
+para ver las instrucciones
+
+
+
+
+hi, I would like to ask a favor finding a bug in my code, there seems to be a bug that only happens in android in this code
+https://github.com/amigojapan/TomBurger3Solar2d/blob/main/game.lua
+on the simulator the game ends then life is less then 11.
+n line 1929 and 1929, in the simulator when I comment out either line, the game just goes into a blank screen instead of going to the menu... but with bothe lines it goes in properly...
+eventho it is working in the simulator, only in Android, when the mouse and the person collide, one or both of them get stuck... but this does not happen in the simulator.
+
+here is the HTML5 version, which does not suffer form the bug. https://amjp.psy-k.org/tom-burger/Play-Tom-Burger-HTML5.html
+
+and here is the APK https://amjp.psy-k.org/tom-burger/TomBurger3.apk
+
+this is hte github where all hte code is at: https://github.com/amigojapan/TomBurger3Solar2d/tree/main
+
+all help greatly appreciated!
+    Amigojapan
+
+https://forums.solar2d.com/t/hi-sorry-to-bother-you-again-but-i-ran-into-another-problem-i-cant-seem-to-solve-after-addign-the-enterframe-event/356729
+hi,
+so yes, i added the event listener for
+addframe, and after I did that is seems to be looping
+in my endgame scenario even-tho I go to another
+screen, so after playing a couple of times, it seems to enter an eternal look of printing print(“Game Over”) and print(“goto menu”)
+on lines 1845 1847 of game.lua
+
+I saw a few posts of people trying to fix such a problem, but I tried their solution which I pun on
+line 154
+which is
+
+if ( phase == "will" ) then
+		Runtime:removeEventListener( "enterFrame", enterFrame ) 
+
+sorry to be bothering you so much, but I cat seem to solve it…
+and thanks in advanced for all your help!
+
+
+https://forums.solar2d.com/t/i-think-this-is-probably-my-last-question/356772
+
+hello again Siu, I have one more question...
+my game I think it really almost done, but now that
+I tested it on android, we noticed that
+the screen controls dont respond very well.
+ I think the cause is on like 22224, where I am
+cancellign the repetition timer in
+event.phase == "ended" or event.phase == "moved" or event.phase == "cancelled"
+of game.lua.
+I tried removing event.phase == "moved" from that
+but then the character keeps on moving when I move the finger while touching...
+in this condition it is possible to control the character, but the movement gets
+cancelled with just the tinyest movement of the finger while touching...
+
+do you know how i can make the controls confortable to use?
+
+here is a copy of the APK, if you have an android device to try it...
+
+https://www.transfernow.net/en/bld?utm_source=tomburger3beta28
+
+here is my github's game.lua
+
+https://github.com/amigojapan/TomBurger3Solar2d/blob/main/game.lua
+
+Thanks in advanced!
+    amigojapan
+
+
+new game, word chomper?
+
+{"category": "vehicle", "Japanese": "自転車", "English": "Bycicle", "Spanish": "Bicicleta"},
+
+
+
+
+
+tom buurger html5 https://amjp.psy-k.org/tom-burger/Play-Tom-Burger-HTML5.html Beta testing bug submition form https://forms.gle/cN2TBi8ftVZBWULT6
+
+You are now starting a 3 day
+trial period of Tom Burger 3,
+if you like the game please
+consider purchasing the full
+version after the trial period ends.
+
+今から３日間の
+お試し期間 が始まります。
+このゲームが気に入って
+くださいましたら、
+是非フルバージョンを
+お買い求めください。
+
+Esta usted comensando una
+temporada de 3 dias de prueba
+de Tom Burger3. Si le gusta el juego,
+porfavor considere comprar la version
+completa.
+
+Your 3 day trial period is over
+if you like the game please
+consider purchasing the full
+version.
+
+今から３日間の
+お試し期間が終わりました。
+このゲームが気に入って
+くださいましたら、
+是非フルバージョンを
+お買い求めください。
+
+Su temporada de 3 dias de prueba
+de Tom Burger3 se ha terminado.
+Si le gusta el juego,porfavor
+considere comprar la version
+completa.
+
+
+Lingo Heroine:
+
+In the following screen, you will take
+a quiz. Select 8 words from the
+category you chose. For each word you
+get right, you will earn a star in 
+Paczel(the battle screen). For each
+word you get wrong, a monster will
+appear in Paczel. Paczel will appear
+after the timer runs out if you got any
+words wrong. You can also long tap a
+word to hear its sound.
+
+quiz explanation:
+In the following screen, you will take
+a quiz. Select 8 words from the
+category you chose. 
+You can also long tap a
+word to hear its sound.
+
+In Paczel, use the arrows to move.
+Collect stars and press the spacebar
+ or red button to shoot monsters.
+You will get a great fireball
+(for long distance attacks) for each
+star.
+You also have an ice attack
+(for short distance attacks.)
+
+
+En la siguiente pantalla, harás un
+cuestionario. Selecciona 8 palabras de
+la categoría que elegiste. Por cada 
+palabracorrecta, ganarás una estrella
+en Paczel (la pantalla de batalla). Por
+cada palabra incorrecta, aparecerá un
+monstruo en Paczel. Paczel aparecerá
+después de que se acabe el tiempo si
+cometiste algún error. También puedes
+tocar y mantener presionada y soltar
+una palabra para escuchar su sonido.
+
+quiz explanation:
+En la siguiente pantalla, harás un
+cuestionario. Selecciona 8 palabras de
+la categoría que elegiste. 
+También puedes tocar y mantener
+presionada y soltar
+una palabra para escuchar su sonido.
+
+
+En Paczel, usa las flechas para moverte.
+Recoge estrellas y presiona la barra
+espaciadora o el botón rojo para disparar.
+Recibirás una gran bola de fuego 
+(para ataques a larga distancia) por cada
+estrella.
+También tienes un ataque de hielo
+(para ataques a corta distancia).
+
+次の画面でクイズを行います。
+選んだカテゴリから8つの単語を
+選択してください。正解した単語
+ごとにPaczel(戦闘画面)で星を
+獲得します。間違えた単語ごとに
+Paczelにモンスターが現れます。
+タイマーが切れると、間違えた
+単語がある場合にPaczelが現れます。
+単語をタップして長押しすると
+その音声を聞くことができます。
+
+quiz explanation:
+次の画面でクイズを行います。
+選んだカテゴリから8つの単語を
+選択してください。
+単語をタップして長押しすると
+その音声を聞くことができます。
+
+
+Paczelでは、矢印を使って移動します。
+星を集め、スペースバーまたは赤いボタン
+を押してモンスターを撃ちます。
+星1つごとに大きな火の玉（遠距離攻撃用）
+を得られます。また、氷の攻撃
+（近距離攻撃用）も使用できます。
+
+
+Tsugi no gamen de kuizu o
+okonaimasu. Eranda kategori
+kara yattsu no tango o
+sentaku shite kudasai. 
+Seikai shita tango goto ni
+Paczel (sentō gamen) de
+hoshi o kakutoku shimasu.
+Machigaeta tango goto ni
+Paczel ni monsutā ga
+arawaremasu.
+Taimaa ga kireru to, machigaeta
+tango ga aru baai ni Paczel ga
+arawaremasu. Tango o tappu shite
+nagaoshi suru to sono osei o
+kiku koto ga dekimasu.
+
+quiz explanation:
+Tsugi no gamen de kuizu o
+okonaimasu. Eranda kategori
+kara yattsu no tango o
+sentaku shite kudasai. 
+Tango o tappu shite nagaoshi
+suru to sono onsei o kiku koto
+ga dekimasu.
+
+
+Paczel de wa, yajirushi o 
+tsukatte idō shimasu.
+Hoshi o atsume, supēsuvā mata
+wa akai botan o oshite monsutā 
+o uchimasu. Hoshi hitotsu goto
+ni ōkina hi no tama 
+(enkyori kōgeki-yō)
+o eraremasu. Mata, kōri
+no kōgeki (kyokyori kōgeki-yō) 
+mo shiyō dekimasu.
