@@ -134,7 +134,7 @@ function scene:show( event )
 			btn4:addEventListener("tap", gotoStudyLanguageJapanese)
 
 			offsetY=offsetY+50
-			btn3 = display.newText( sceneGroup, "Nigongo wo romaji de benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
+			btn3 = display.newText( sceneGroup, "nihongo wo romaji de benkyou suru", display.contentCenterX, offsetY, "fonts/ume-tgc5.ttf", 40 )
 			btn3:setFillColor( 0.82, 0.86, 1 )				
 			btn3:addEventListener("tap", gotoStudyLanguageRomajiInRomaji)
 
