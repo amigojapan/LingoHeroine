@@ -76,6 +76,21 @@ end
 -- show()
 function scene:show( event )
 
+audio.reserveChannels( 1 )
+	--stop music
+	audio.stop( 1 )
+	-- Reduce the overall volume of the channel
+	audio.setVolume( 0.3, { channel=1 } )
+
+
+	-- Load audio
+	musicTrack = audio.loadStream( "audio/Base-Game-Loop.mp3",system.ResourceDirectory)
+
+
+	-- Play the background music on channel 1, loop infinitely 
+	audio.play( musicTrack, { channel=1, loops=-1 } )
+
+
 	local sceneGroup = self.view
 	local phase = event.phase
 

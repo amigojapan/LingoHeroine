@@ -124,6 +124,7 @@ restartGameTimer=nil
 function restartGame()
 	timer.cancel(restartGameTimer)
 	hideEverything()
+	audio.play(gameOverSoundEffect)
 	composer.gotoScene( "GameOver" )
 end
 
@@ -395,6 +396,8 @@ function hideEverything()
 	myRightButton.isVisible=false
 	myFireButton.isVisible=false
 	col.isVisible=false
+	--stop music
+	audio.stop( 1 )
 end
 
 -- hide()
@@ -522,6 +525,7 @@ function moveInDirection(dx, dy, direction, movingObject)
 					-- happens when slime collided with fireball
 					if sprite.isVisible then
 						numberOfFireballs=numberOfFireballs+1	
+						audio.play(getStarSoundEffect)
 						sprite.isVisible=false
 					end
 
@@ -562,6 +566,7 @@ function moveInDirection(dx, dy, direction, movingObject)
 					-- happens when slime collided with fireball
 					if fireBall.isVisible==true then --this is to prevent collision when freezeball, we are sharing the same object name as fireball
 						sprite.isVisible=false
+						audio.play(mosterDeadSoundEffect)
 						checkForStangeClear()
 					end
 				--end
@@ -698,6 +703,7 @@ function fireball()
 			fireBall.isVisible=true
 			fireBall.width=gridSize*3
 			fireBall.height=gridSize*3
+			audio.play(fireSoundEffect)
 			transition.to(fireBall, {time = timeForMoveInMilliseconds+5000, y = -500, onComplete = onCompletecallbackFireball})
 		end
 		if tom.direction=="left" then
@@ -706,6 +712,7 @@ function fireball()
 			fireBall.isVisible=true
 			fireBall.width=gridSize*3
 			fireBall.height=gridSize*3
+			audio.play(fireSoundEffect)
 			transition.to(fireBall, {time = timeForMoveInMilliseconds+5000, x = -500, onComplete = onCompletecallbackFireball})
 		end
 		if tom.direction=="down" then
@@ -714,6 +721,7 @@ function fireball()
 			fireBall.isVisible=true
 			fireBall.width=gridSize*3
 			fireBall.height=gridSize*3
+			audio.play(fireSoundEffect)
 			transition.to(fireBall, {time = timeForMoveInMilliseconds+5000, y = 1500, onComplete = onCompletecallbackFireball})
 		end
 		if tom.direction=="right" then
@@ -722,6 +730,7 @@ function fireball()
 			fireBall.isVisible=true
 			fireBall.width=gridSize*3
 			fireBall.height=gridSize*3
+			audio.play(fireSoundEffect)
 			transition.to(fireBall, {time = timeForMoveInMilliseconds+5000, x = 1500, onComplete = onCompletecallbackFireball})
 		end
 		numberOfFireballs=numberOfFireballs-1
@@ -750,6 +759,7 @@ function fireball()
 			fireBall.isVisible=true
 			transition.to(fireBall, {time = timeForMoveInMilliseconds, alpha = 0, onComplete = onCompletecallbackFrezeball})
 		end
+		audio.play(freezeSoundEffect)
 	end
 end
 
@@ -1109,6 +1119,29 @@ function onKeyEvent( event )
 end
 Runtime:addEventListener( "enterFrame", frameUpdate )
 Runtime:addEventListener( "key", onKeyEvent )
+--stop music
+audio.stop( 1 )
+
+audio.reserveChannels( 1 )
+-- Reduce the overall volume of the channel
+audio.setVolume( 1, { channel=1 } )
+
+
+-- Load audio
+musicTrack = audio.loadStream( "audio/into-the-battle.mp3",system.ResourceDirectory)
+
+
+-- Play the background music on channel 1, loop infinitely 
+audio.play( musicTrack, { channel=1, loops=-1 } )
+
+--sound effects load
+fireSoundEffect = audio.loadStream( "audio/fuego.mp3",system.ResourceDirectory)
+freezeSoundEffect = audio.loadStream( "audio/Ice.mp3",system.ResourceDirectory)
+mosterDeadSoundEffect = audio.loadStream( "audio/Dead.mp3",system.ResourceDirectory)
+gameOverSoundEffect = audio.loadStream( "audio/Gameover.mp3",system.ResourceDirectory)
+getStarSoundEffect = audio.loadStream( "audio/glissando.mp3",system.ResourceDirectory)
+
+
 
 
 return scene
@@ -1120,4 +1153,4 @@ return scene
 --(dont remember what I did, but ti seems to be fixed in the newest version)BUG:close proximity attack is not working
 --(fixed)words are nto capilatized correctly in i18n dictionary in english for category names, or maybe it is in the json file
 --(fixed)bug, it is defaulting to slow speed when no option is selected on android...
---** reminder, modify the explanation screen for when the person does quiz mode
+--(done) reminder, modify the explanation screen for when the person does quiz mode

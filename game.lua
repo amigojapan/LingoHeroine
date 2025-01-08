@@ -260,6 +260,7 @@ function handleTapEvent(event)
         end
         event.target.right=true
         pointCount=pointCount+1
+        audio.play(rightSoundEffect)
         --add star icons
         sprite=display.newImage("img/power-up.png", iconsOffsetY, iconsOffsetX, 16, 16)
         table.insert(iconsTable,sprite)
@@ -289,6 +290,7 @@ function handleTapEvent(event)
         event.target.right=false
         event.target.correctAnswer=false
         wrongAnswers=wrongAnswers+1
+        audio.play(wrongSoundEffect)
         --add monster icons
         color=math.random(1,2)
         if color==1 then
@@ -309,7 +311,8 @@ end
 local platform = system.getInfo("platform")
 if platform == "win32" or platform == "win64" then
 	print("rinning on windows")
-	timeOut=0.15000000000003
+	--timeOut=0.15000000000003
+	timeOut=0.20
 end
 
 function functTapListener(event)
@@ -551,6 +554,11 @@ scene:addEventListener( "show", scene )
 scene:addEventListener( "hide", scene )
 scene:addEventListener( "destroy", scene )
 -- -----------------------------------------------------------------------------------
+
+rightSoundEffect = audio.loadStream( "audio/right-sound.mp3",system.ResourceDirectory)
+wrongSoundEffect = audio.loadStream( "audio/wrong-sound.mp3",system.ResourceDirectory)
+--stop music
+audio.stop( 1 )
 
 return scene
 

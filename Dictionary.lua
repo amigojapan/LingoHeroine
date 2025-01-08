@@ -362,7 +362,10 @@ end
 translate=nil
 -- show()
 function scene:show( event )
-
+	
+	--stop music
+	audio.stop( 1 )
+	
 	local sceneGroup = self.view
 	local phase = event.phase
 
