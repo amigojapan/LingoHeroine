@@ -38,13 +38,13 @@ function scene:create( event )
 	language=composer.getVariable( "language" )
 	if language=="English" then
 		story = display.newImageRect( sceneGroup, "backgrounds/trialEndEnglish.png", 1000,800 )
-		url="https://amjp.psy-k.org/tom-burger/Play-Tom-Burger-HTML5.html"
+		url="https://amjp.psy-k.org/lingo-heroine/Play-Lingo-Heroine-HTML5.html"
 	elseif language=="Japanese" then
 		story = display.newImageRect( sceneGroup, "backgrounds/trialEndJapanese.png", 1000,800 )
-		url="https://amjp.psy-k.org/tom-burger//Play-Tom-Burger-HTML5-jp.html"
+		url="https://amjp.psy-k.org/lingo-heroine/Play-Lingo-Heroine-HTML5-jp.html"
 	elseif language=="Spanish" then
 		story = display.newImageRect( sceneGroup, "backgrounds/trialEndSpanish.png", 1000,800 )
-		url="https://amjp.psy-k.org/tom-burger//Play-Tom-Burger-HTML5-es.html"
+		url="https://amjp.psy-k.org/lingo-heroine/Play-Lingo-Heroine-HTML5-es.html"
 	end
 	story.x = display.contentCenterX
 	story.y = display.contentCenterY
