@@ -596,3 +596,4 @@ return scene
 --make the quiz only version of the game
 --  make the play paczel only part of the game
 --bug**Tamama> went back to main screen... then i get a game over popup... i hit OK ... 2 seconds later again the same popup.. it keeps popping
+--after game over then it goes back to game over screen after a small timeout
