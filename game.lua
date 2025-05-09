@@ -384,7 +384,8 @@ function everySecondTimer()
             if wrongAnswers == 0 and pointCount>0 then
                 hideEverything()
                 composer.setVariable( "wordsRight", pointCount )
-                composer.gotoScene( "goodJob" )    
+                composer.gotoScene( "goodJob" )  
+                return
             end            
             if wrongAnswers > 0  then
                 hideEverything()
@@ -392,8 +393,10 @@ function everySecondTimer()
                     composer.setVariable( "wordsRight", pointCount )
                     if pointCount>0 then
                         composer.gotoScene( "goodJob" )
+                        return
                     else
                         composer.gotoScene( "tryAgain" )
+                        return
                     end
                 else
                     composer.gotoScene( "paczelExplanation" )
@@ -427,6 +430,9 @@ end
 background = display.newGroup()
 wordTable={}
 function hideEverything()
+    if timerEverySecond then
+        timer.cancel(timerEverySecond)
+    end
     background.isVisible=false
     for key, value in ipairs(wordTable) do
         value.isVisible=false
@@ -596,4 +602,4 @@ return scene
 --make the quiz only version of the game
 --  make the play paczel only part of the game
 --bug**Tamama> went back to main screen... then i get a game over popup... i hit OK ... 2 seconds later again the same popup.. it keeps popping
---after game over then it goes back to game over screen after a small timeout
+--(I think I fixed it but have not tested it)(I think it is in hte good job screen)after game over then it goes back to game over screen after a small timeout
